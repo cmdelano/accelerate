@@ -1,3 +1,5 @@
 # Ignore the following
 .DS_Store
+.htacess
 wp-config.php
+wp-content/uploads
