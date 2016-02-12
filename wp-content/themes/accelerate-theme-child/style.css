@@ -71,7 +71,6 @@
 	font-weight: bold;
 }
 
-
 .blog-post .read-more-link {
 	font-size: 24px;
 	font-family: 'Montserrat';
@@ -80,7 +79,7 @@
 	text-transform: uppercase;
 }
 
-/* case studies post style */
+/* case studies post styles */
 
 .case-study-sidebar {
 	float: left;
@@ -91,6 +90,7 @@
 	/*padding-bottom: 0;
 	margin-bottom: 0;*/
 }
+
 .case-study-sidebar h5 {
 	font-size: 12px;
 	color: gray;
@@ -113,18 +113,10 @@
 	width: 60%;
 }
 
-
-.case-study-images {
-	float: right;
-	max-width: 610px;
-	padding: 0;
-	margin: 50px 0 0 0
-}
-
 .case-study-images img {
-	display: block;
 	float: right;
-	width: 90%;
-	overflow: hidden;
+	width: 600px;
+	margin: 35px 0 0 0;
+	border: 1px solid #ddd;
 }
 
