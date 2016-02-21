@@ -1,4 +1,3 @@
-
 /*
  Theme Name:   Accelerate Theme Child
  Theme URI:    http://example.com/accelerate-theme-child/
@@ -13,12 +12,6 @@
 
 
 @import url("../accelerate-theme/style.css");
-
-/*img {
-    border: 0;
-    height: auto;
-    max-width: 100%;
-}*/
 
 
 /* Home page styles */
@@ -42,7 +35,9 @@
 #masthead nav ul li {
 	list-style-type:none;
 	display: inline-block;
-	margin: 0 20px 0 0;
+	margin: 0 30px 0 0;
+	text-transform: uppercase;
+	font-size: 13px;
 }
 
 /* "View Our Work" button */
@@ -56,7 +51,6 @@
 .blog-post {
 	width: 50%;
 }
-
 
 .blog-post h4 {
 	font-size: 16px;
@@ -79,14 +73,19 @@
 	text-transform: uppercase;
 }
 
-/* case studies post styles */
+/* case studies post styles on case studies page*/
+
+.case-study {
+	margin: 0 0 0 15px;
+}
 
 .case-study-sidebar {
 	float: left;
-	width: 300px;
+	width: 280px;
+	margin-right: 0;
 }
 
-.case-study-sidebar h2 {
+.case-study-sidebar h2 {/**** CINDY: this is the_title which is a child of #content which you set to 600px for the contact form. hmm. not working... ***/
 	/*padding-bottom: 0;
 	margin-bottom: 0;*/
 }
@@ -109,14 +108,131 @@
 }
 
 .case-study-sidebar p {
-	font-size: 10px;
-	width: 60%;
+	font-size: 48px;
+	width: 250px;
 }
 
 .case-study-images img {
 	float: right;
-	width: 600px;
+	width: 650px;
 	margin: 35px 0 0 0;
 	border: 1px solid #ddd;
 }
 
+/* styles for case studies archive page */
+
+.case-study-images-archives img {
+	float: right;
+	margin: 40px 200px 0 0;
+	width: auto;
+	border: 1px solid #ddd;
+}
+
+.case-study-excerpt {/*** this won't work because "the excerpt" is in the #content ***/
+	width: 100px;
+}
+
+.clearfix {
+	clear: both;
+}
+
+.featured-work { 
+	text-align: center;
+	text-transform: uppercase;
+	color: #99999;
+	padding-bottom: 30px;
+	margin-bottom: 30px;
+}
+
+.homepage-featured-work {
+	min-width: 1020px;
+}
+
+.homepage-featured-work ul {
+	margin:0;
+	padding:0;
+}
+
+.homepage-featured-work li {
+	list-style-type: none;
+	display: inline-block;
+	padding: 0 35px 0 0;
+}
+
+.homepage-featured-work h3 {
+	text-align: center;
+	font-size: 16px;
+	color: gray;
+}
+
+/* Contact Form styles */
+
+#ninja_forms_form_15_cont {
+	width: 600px;
+	margin-left: 150px;
+}
+
+#content h2 { /*** #content appears in each page, so altering it here alters it on other pages that use it. sigh... ***/
+	width: 700px;
+	margin: 50px 0 15px 150px;
+	font-size: 20px;
+	font-variant: normal;
+}
+
+#content p {
+	width: 600px;
+	margin-left: 150px;
+	font-size: 14px;
+	color: gray;
+}
+
+.ninja-forms-field {
+	border: 1px solid lightgray;
+}
+
+
+/* Name field in contact form */
+#ninja_forms_field_19_div_wrap {
+	float: left;
+	width: 46%;
+}
+
+/* Name label in contact form */
+#ninja_forms_field_19_label {
+	float: left;
+	font-size: 14px;
+	color: #666666;
+}
+
+/* Email field in contact form */
+#ninja_forms_field_20_div_wrap {
+	float: right;
+	width: 50%;
+	margin-left: 0;
+}
+
+/* Email label in contact form */
+#ninja_forms_field_20_label {
+	float: left;
+	font-size: 14px;
+	color: #666666;
+}
+
+/* Message label in contact form */
+#ninja_forms_field_18_label {
+	float: left;
+	font-size: 14px;
+	color: #666666;
+}
+
+/* Send button */
+#ninja_forms_field_17 {
+	float: right;
+	width: 180px;
+	min-height: 50px;
+	background-color: #45ac9d;
+	color: white;
+	font-size: 16px;
+	font-weight: bold;
+	border: none;
+}
