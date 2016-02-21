@@ -172,17 +172,20 @@
 	margin-left: 150px;
 }
 
-#content h2 { /*** #content appears in each page, so altering it here alters it on other pages that use it. sigh... ***/
-	width: 700px;
+.narrow-contact {
+	width: 600px;
+}
+
+.narrow-contact h2 {
 	margin: 50px 0 15px 150px;
-	font-size: 20px;
+	font-size: 22px;
 	font-variant: normal;
 }
 
-#content p {
+.narrow-contact p {
 	width: 600px;
 	margin-left: 150px;
-	font-size: 14px;
+	font-size: 16px;
 	color: gray;
 }
 
