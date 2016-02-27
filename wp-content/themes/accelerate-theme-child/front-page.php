@@ -26,31 +26,29 @@ get_header(); ?>
 </section><!-- .home-page -->
 
 
-	<h4 class="featured-work">Featured Work</h4>
-
+<section class="featured-work">
+	<h4>Featured Work</h4>	
 
 	<div class="site-content">
 
 		<section class="homepage-featured-work">
-		
+
+
 			<?php query_posts('posts_per_page=3&post_type=case_studies'); ?>
-
 				<?php while ( have_posts() ) : the_post(); 
-				$image_1 = get_field("image_1");
-				$size = "medium";?>
-			
-			<li>
-				<figure>
-					<?php echo wp_get_attachment_image($image_1, $size); ?>
-				</figure>
-				<a href="<?php the_permalink(); ?>"><h3><?php  the_title(); ?></h3></a>
- 			</li>
-			
-
-			<?php endwhile; // end of the loop. ?>
+					$image_1 = get_field("image_1");
+					$size = "medium";?>
+					<li>
+						<figure>
+						<a href="<?php the_permalink(); ?>"><?php echo wp_get_attachment_image($image_1, $size); ?></a>
+						</figure>
+						<a href="<?php the_permalink(); ?>"><h3><?php  the_title(); ?></h3></a>
+ 					</li>
+				<?php endwhile; // end of the loop. ?>
 			<?php wp_reset_query(); // resets the altered query back to the original ?>
-		</ul><!-- .homepage-featured-work -->
-	</section><!-- .site-content -->
+		</section><!-- .homepage-featured-work -->
+	</div><!-- .site-content -->
+</section><!-- .featured-work -->
 
 <section class="recent-posts">
 	<div class="site-content">

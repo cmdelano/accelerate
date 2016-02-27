@@ -23,17 +23,17 @@ get_header(); ?>
 			$image_2 = get_field('image_2');
 			$image_3 = get_field('image_3'); ?>
 
+		<div class="clearfix">
 
-		<section class="case-study">
-					<aside class="case-study-sidebar">
-				<h2><?php the_title(); ?></h2>
-				<h5><?php echo $services; ?></h5>
-				<h3><?php echo $client; ?></h3>
-					<?php the_content(); ?>
-				<h4><a href="<?php echo $site; ?>">Visit Live Site</a></h4>
-			</aside>
+		<aside class="case-study-sidebar">
+			<h2><?php the_title(); ?></h2>
+			<h5><?php echo $services; ?></h5>
+			<h3><?php echo $client; ?></h3>
+				<p><?php the_content(); ?></p>
+			<h4><a href="<?php echo $site; ?>">Project Site</a></h4>
+		</aside>
 
-			<div class="case-study-images">
+		<div class="case-study-images-archive">
 				<?php if ($image_1) { ?>
 					<?php echo wp_get_attachment_image( $image_1, $size ); ?>
 				<?php } ?>
@@ -45,11 +45,11 @@ get_header(); ?>
 				<?php if ($image_3) { ?>
 					<?php echo wp_get_attachment_image( $image_3, $size ); ?>
 				<?php } ?>	
-			</div>	
+		</div>	
 
-		</section>
-				
-			<?php endwhile; // end of the loop. ?>
+		</div><!-- .clearfix -->
+			
+		<?php endwhile; // end of the loop. ?>
 
 		</div><!-- #content -->
 	</div><!-- #primary -->

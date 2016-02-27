@@ -75,19 +75,15 @@
 
 /* case studies post styles on case studies page*/
 
-.case-study {
-	margin: 0 0 0 15px;
-}
 
 .case-study-sidebar {
 	float: left;
-	width: 280px;
+	width: 300px;
 	margin-right: 0;
 }
 
-.case-study-sidebar h2 {/**** CINDY: this is the_title which is a child of #content which you set to 600px for the contact form. hmm. not working... ***/
-	/*padding-bottom: 0;
-	margin-bottom: 0;*/
+.case-study-sidebar h2 {
+	margin-top: 50px;
 }
 
 .case-study-sidebar h5 {
@@ -108,52 +104,38 @@
 }
 
 .case-study-sidebar p {
-	font-size: 48px;
-	width: 250px;
+	font-size: 13px;
+	width: 290px;
 }
 
-.case-study-images img {
+.case-study-images-archive img {
 	float: right;
-	width: 650px;
-	margin: 35px 0 0 0;
-	border: 1px solid #ddd;
-}
-
-/* styles for case studies archive page */
-
-.case-study-images-archives img {
-	float: right;
-	margin: 40px 200px 0 0;
+	margin: 50px 0 0 0;
 	width: auto;
 	border: 1px solid #ddd;
 }
 
-.case-study-excerpt {/*** this won't work because "the excerpt" is in the #content ***/
-	width: 100px;
-}
 
 .clearfix {
 	clear: both;
 }
 
-.featured-work { 
+.featured-work h4 { 
 	text-align: center;
 	text-transform: uppercase;
 	color: #99999;
-	padding-bottom: 30px;
+	padding-bottom: 20px;
 	margin-bottom: 30px;
 }
+
+/* styles for the feature work on home page */
 
 .homepage-featured-work {
 	min-width: 1020px;
 }
 
-.homepage-featured-work ul {
-	margin:0;
-	padding:0;
-}
-
 .homepage-featured-work li {
+
 	list-style-type: none;
 	display: inline-block;
 	padding: 0 35px 0 0;
