@@ -10,21 +10,31 @@
 
 get_header(); ?>
 
+<section class="home-page">
+	<div class="site-content">
+		<?php while ( have_posts() ) : the_post(); 
+		
+			$about = get_field( 'about_accelerate_text' ); ?>
 
+			<div class="hero-about-text">
+				<p><?php echo $about; ?></p>
+			</div>
+
+		<?php endwhile; // end of the loop. ?>
+	</div><!-- .container -->
+</section><!-- .home-page -->
 
 
 	<div id="primary" class="site-content">
 		<div id="content" role="main">
-<!-- <?php query_posts('post_type=services'); ?>
- --> 
-			
+		<?php query_posts('post_type=services'); ?>
 
 			<?php while ( have_posts() ) : the_post(); 
 
 				
 				$size = "full";
-				$about = get_field( 'about_accelerate_text' );
-				$our_services = get_field ( 'about_services_blurb');
+				$our_services = get_field ( 'our_services_blurb'); 
+				// $about = get_field( 'about_accelerate_text' );
 				$service1 = get_field( 'service_1_title' );
 				$description1 = get_field ( 'service_1_description');
 				$image1 = get_field ( 'service_1_image' );
@@ -38,57 +48,52 @@ get_header(); ?>
 				$description4 = get_field ( 'service_4_description');
 				$image4 = get_field ( 'service_4_image' ); ?>
 
-			<section class="services">
+				<section class="services-blurb">	
+					<h1><?php the_title(); ?></h1>
+					<p><?php echo $our_services; ?></p>
+				</section>
+		
+				<article class="first-service">
+					<h2><?php echo $service1; ?></h2>
+						<figure class="first-service-image">
+							<?php if ($image1) { ?>
+							<?php echo wp_get_attachment_image( $image1, $size ); ?>
+							<?php } ?>
+						</figure>
+					<p><?php echo $description1; ?></p
 
-				<p><?php echo $about; ?></p>
+				<article class="second-service">
+					<h2><?php echo $service2; ?></h2>
+					<p><?php echo $description2; ?></p>
+					<figure>
+						<?php if ($image2) { ?>
+						<?php echo wp_get_attachment_image( $image2, $size ); ?>
+						<?php } ?>
+					</figure>
+				</article>
 
-				<h6><?php the_title(); ?></h6>	
-
-				<p><?php echo $our_services; ?></p>
-
-
-				<h2><?php echo $service1; ?></h2>
-				<p><?php echo $description1; ?></p>
-				<figure>
-					<?php if ($image1) { ?>
-					<?php echo wp_get_attachment_image( $image1, $size ); ?>
-					<?php } ?>
-				</figure>
-
-				
-				<h2><?php echo $service2; ?></h2>
-				<p><?php echo $description2; ?></p>
-				<figure>
-					<?php if ($image2) { ?>
-					<?php echo wp_get_attachment_image( $image2, $size ); ?>
-					<?php } ?>
-				</figure>
-
-				
-				<h2><?php echo $service3; ?></h2>
-				<p><?php echo $description3; ?></p>
-				<figure>
+				<article class="third-service">
+					<h2><?php echo $service3; ?></h2>
+					<figure>
 					<?php if ($image3) { ?>
 					<?php echo wp_get_attachment_image( $image3, $size ); ?>
 					<?php } ?>
-				</figure>
+					</figure>
+					<p><?php echo $description3; ?></p>
+				</article>
 
-				
-				<h2><?php echo $service4; ?></h2>
-				<p><?php echo $description4; ?></p>
-				<figure>
-					<?php if ($image4) { ?>
-					<?php echo wp_get_attachment_image( $image4, $size ); ?>
-					<?php } ?>
-				</figure>
-				
-				
-			</section>
+				<article class="fourth-service">
+					<h2><?php echo $service4; ?></h2>
+					<p><?php echo $description4; ?></p>
+					<figure>
+						<?php if ($image4) { ?>
+						<?php echo wp_get_attachment_image( $image4, $size ); ?>
+						<?php } ?>
+					</figure>
+				</article>
 
 			<?php endwhile; // end of the loop. ?>
-
-<!-- 		<?php wp_reset_query(); // resets the altered query back to the original ?>
- -->			
+			<?php wp_reset_query(); // resets the altered query back to the original ?>			
 		</div><!-- #content -->
 	</div><!-- #primary -->
 

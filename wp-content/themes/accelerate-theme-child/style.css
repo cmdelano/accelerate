@@ -14,7 +14,7 @@
 @import url("../accelerate-theme/style.css");
 
 
-/* Home page styles */
+/** Home page styles **/
 
 
 /* hero image */
@@ -47,7 +47,7 @@
 }
 
 
-/* single blog post styles on front page */
+/** single blog post styles on home page **/
 .blog-post {
 	width: 50%;
 }
@@ -73,8 +73,64 @@
 	text-transform: uppercase;
 }
 
-/* case studies post styles on case studies page*/
+/* styles for the featured work on home page */
 
+.homepage-featured-work {
+	min-width: 1020px;
+}
+
+.homepage-featured-work li {
+
+	list-style-type: none;
+	display: inline-block;
+	padding: 0 35px 0 0;
+}
+
+.homepage-featured-work h3 {
+	text-align: center;
+	font-size: 16px;
+	color: gray;
+}
+
+/** Our Services/About page style **/
+
+
+.hero-about-text {
+	text-align: center;
+	color: #fff;
+	font-size: 40px;
+	width: auto;
+	margin: 80px 0 0 0;
+}
+
+.services-blurb h1 {
+	text-align: center;
+	color: pink;
+	font-size: 20px;
+	width: auto;
+}
+
+.services-blurb p {
+	text-align: center;
+	color: purple;
+	font-size: 18px;
+	margin: 0 200px 0 200px;
+}
+
+.first-service  p {
+	display: inline-block;
+	text-align: left;
+	float: right;
+}
+
+.firtst-serivce-image {
+	display: inline-block;
+	float: left;
+	width: 500px;
+	margin-right: 0;
+}
+
+/** Case Studies page styles **/
 
 .case-study-sidebar {
 	float: left;
@@ -108,13 +164,12 @@
 	width: 290px;
 }
 
-.case-study-images-archive img {
+.case-study-images-archive /*img*/ {
 	float: right;
 	margin: 50px 0 0 0;
 	width: auto;
 	border: 1px solid #ddd;
 }
-
 
 .clearfix {
 	clear: both;
@@ -128,26 +183,7 @@
 	margin-bottom: 30px;
 }
 
-/* styles for the feature work on home page */
-
-.homepage-featured-work {
-	min-width: 1020px;
-}
-
-.homepage-featured-work li {
-
-	list-style-type: none;
-	display: inline-block;
-	padding: 0 35px 0 0;
-}
-
-.homepage-featured-work h3 {
-	text-align: center;
-	font-size: 16px;
-	color: gray;
-}
-
-/* Contact Form styles */
+/** Contact Form styles **/
 
 #ninja_forms_form_15_cont {
 	width: 600px;
@@ -174,7 +210,6 @@
 .ninja-forms-field {
 	border: 1px solid lightgray;
 }
-
 
 /* Name field in contact form */
 #ninja_forms_field_19_div_wrap {
