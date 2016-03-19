@@ -19,7 +19,7 @@
 
 /* hero image */
 .home-page {
-    background: url("img/taxi-photo.jpg") no-repeat scroll left center / cover rgba(0, 0, 0, 0);
+    background: url("img/taxi-photo-copy.jpg") no-repeat scroll left center / cover rgba(0, 0, 0, 0);
 }
 
 /* masthead color */
@@ -35,12 +35,17 @@
 #masthead nav ul li {
 	list-style-type:none;
 	display: inline-block;
-	margin: 0 30px 0 0;
+	margin: 0 50px 0 0;
 	text-transform: uppercase;
 	font-size: 13px;
+	text-align: center;
 }
 
 /* "View Our Work" button */
+
+span {
+	color: #45ac9d; 
+}
 
 .button {
     background: none repeat scroll 0 0 #45ac9d;
@@ -92,7 +97,62 @@
 	color: gray;
 }
 
-/** Our Services/About page style **/
+
+/** styles for services image on home page **/
+
+
+/** Cindy: why does this go all to hell when I take out the ul and li? **/ 
+
+
+.services-images h4 {
+	text-transform: uppercase;
+	text-align: center;
+	margin-top: 75px;
+	color: #99999;
+
+}
+
+.services-images figure {
+	display: inline-block;
+	padding: 0;
+	margin-left: 10px;
+}
+
+
+.services-title ul {
+	list-style-type: none;
+	/*margin: 0;
+	padding: 0;*/
+}
+
+.services-title li {
+	display: inline-block;
+	color: red;
+	font-size: 14px;
+	margin-left: 40px;
+	margin-right: 50px;
+	padding: 0;
+}
+
+
+.title1 {
+	margin-left: 30px;
+}
+
+.title2 {
+	margin-left: 70px;
+}
+
+.title3 {
+	margin-left: 50px;
+}
+
+.title4 {
+	margin-left: 30px;
+}
+
+
+/** Our Services/About page styles **/
 
 
 .hero-about-text {
@@ -105,29 +165,94 @@
 
 .services-blurb h1 {
 	text-align: center;
-	color: pink;
-	font-size: 20px;
+	text-transform: uppercase;
+	color: #333;
+	font-size: 18px;
 	width: auto;
 }
 
 .services-blurb p {
 	text-align: center;
-	color: purple;
-	font-size: 18px;
+	color: #999;
+	font-size: 16px;
+	font-family: 'Montserrat';
 	margin: 0 200px 0 200px;
 }
 
-.first-service  p {
-	display: inline-block;
-	text-align: left;
+.text-right {
 	float: right;
+	display: inline-block;
+	width: 70%;
 }
 
-.firtst-serivce-image {
-	display: inline-block;
+.text-right p {
+	font-size: 16px;
+	font-family: 'Montserrat';
+	color: #999;
+}
+
+.text-right h2 {
+	font-weight: normal;
+	font-family: 'Montserrat';
+	color: #666;
+	padding-bottom: 10px;
+}
+
+.text-left {
 	float: left;
-	width: 500px;
-	margin-right: 0;
+	display: inline-block;
+	width: 70%;
+}
+
+.text-left h2 {
+	font-weight: normal;
+	font-family: 'Montserrat';
+  	color: #666;
+  	padding-bottom: 10px;
+}
+
+.text-left p {
+	font-size: 16px;
+	font-family: 'Montserrat';
+	color: #999;
+}
+
+.service-image-left {
+	float: left;
+	display: inline-block;
+	padding: 0;
+	margin: 20px 20px 30px 0;
+}
+
+.service-image-right {
+	float: right;
+	display: inline-block;
+	padding-left: 20px 0 30px 0;
+}
+
+.work-with-us {
+	margin: 100px 0 200px 0;
+}
+
+.work-with-us h3 {
+	float: left;
+	display: inline-block;
+	margin: 10px 0 0 100px;
+}
+
+/* cind: work on this next! */
+
+.work-button {
+	float: right;
+	display: inline-block;
+	background: none repeat scroll 0 0 #45ac9d;
+    color: white;
+    font-family: "montserrat";
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 70px;
+    margin-right: 220px;
+    text-align: center;
 }
 
 /** Case Studies page styles **/

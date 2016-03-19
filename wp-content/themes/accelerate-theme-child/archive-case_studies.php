@@ -35,7 +35,7 @@ get_header(); ?>
 				<?php if ($image_1) { ?>
 					<?php echo wp_get_attachment_image( $image_1, $size ); ?>
 				<?php } ?>
-			</div><!-- case-study-images-archives -->
+			</div><!-- .case-study-images-archives -->
 
 			</div><!-- .clearfix -->
 
