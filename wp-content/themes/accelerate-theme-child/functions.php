@@ -28,7 +28,7 @@
 
 function create_custom_post_types() {
 
-/* creating the Case Study post type */
+// creating the Case Study post type
     register_post_type( 'case_studies',
         array(
             'labels' => array(
@@ -42,19 +42,19 @@ function create_custom_post_types() {
     );
 }
 
+// Hooks the custom function up to the theme
 add_action( 'init', 'create_custom_post_types' );
 
-// /* creating the Services post type */
-//     register_post_type( 'services',
-//         array(
-//             'labels' => array(
-//                 'name' => __( 'Services' ),
-//                 'singular_name' => __( 'Service' )
-//             ),
-//             'public' => true,
-//             'has_archive' => true,
-//             'rewrite' => array( 'slug' => 'services' ),
-//         )
-//     );
 
-add_action( 'init', 'create_custom_post_types' );
+// adding dynamic sidebar for Twiiter feed
+
+
+register_sidebar( array(
+    'name' =>__( 'Homepage sidebar', 'homepage-sidebar'),
+    'id' => 'sidebar-2',
+    'description' => __( 'Appears on the static front page template', 'homepage-sidebar' ),
+    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+    'after_widget' => '</aside>',
+    'before_title' => '<h3 class="widget-title">',
+    'after_title' => '</h3>',
+) );

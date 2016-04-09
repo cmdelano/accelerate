@@ -16,7 +16,7 @@ get_header(); ?>
 
 
 
-
+<!-- homepage hero -->
 <section class="home-page">
 	<div class="site-content">
 		<?php while ( have_posts() ) : the_post(); ?>
@@ -28,7 +28,7 @@ get_header(); ?>
 	</div><!-- .container -->
 </section><!-- .home-page -->
 
-
+<!-- case studies on home page "featured work" -->
 <section class="featured-work">
 	<h4>Featured Work</h4>	
 	<div class="site-content">
@@ -49,16 +49,17 @@ get_header(); ?>
 	</div><!-- .site-content -->
 </section><!-- .featured-work -->
 
-<!-- this is the aread that I so confused about! -->
-
-<section class="services-images"><!-- should this be moved inside "site-content"? -->
+<!-- services listed on home page -->
+<section class="services">
 	<div class="site-content">
 		<h4>Our Services</h4>
-			<?php query_posts('post_type=page'); ?>
-					<?php while ( have_posts() ) : the_post();
+			<?php query_posts('pagename=about'); ?>
+					
+					<ul>
+					
+					<?php while ( have_posts() ) : the_post(); ?>
 
-
-					$image1 = get_field ( 'service_1_image' );
+					<?php $image1 = get_field ( 'service_1_image' );
    					$image2 = get_field ( 'service_2_image' );
 					$image3 = get_field ( 'service_3_image' );
 					$image4 = get_field ( 'service_4_image' );
@@ -67,46 +68,89 @@ get_header(); ?>
 					$services3 = get_field ( 'service_3_title');
 					$services4 = get_field ( 'service_4_title');
 					$size = "full"; ?>
-					
+
+
+					<li>
 					<figure>
 						<?php echo wp_get_attachment_image( $image1, $size ); ?>
-						<?php echo wp_get_attachment_image( $image2, $size ); ?>
-						<?php echo wp_get_attachment_image( $image3, $size ); ?>
-						<?php echo wp_get_attachment_image( $image4, $size ); ?>
 					</figure>
+					<h5><?php echo $services1; ?></h5>
+					</li>
 
-					<ul class="services-title">
-						<li><?php echo $services1; ?></li>
-						<li><?php echo $services2; ?></li>
-						<li><?php echo $services3; ?></li>
-						<li><?php echo $services4; ?></li>
-					</ul>		
+					<li>
+						<figure>
+							<?php echo wp_get_attachment_image( $image2, $size ); ?>
+						</figure>
+						<h5><?php echo $services2; ?></h5>
+					</li>
 
+					<li>
+						<figure>
+						<?php echo wp_get_attachment_image( $image3, $size ); ?>
+						</figure>
+						<h5><?php echo $services3; ?></h5>
+					</li>
+
+					<li>
+						<figure>
+						<?php echo wp_get_attachment_image( $image4, $size ); ?>
+						</figure>
+						<h5><?php echo $services4; ?></h5>
+					</li>
+				
 				<?php endwhile; // end of the loop. ?>
-			<?php wp_reset_query(); ?>
+				</ul>
+				
+		<?php wp_reset_query(); ?>
+	</div><!-- .site-content -->
+</section><!-- .services -->
 
+<!-- recent blog posts area -->
 
-	</div>
-</section>
+<div class="site-content">
+		<section class="recent-posts">
+			<div class="blog-post">
+				<h4>From the Blog</h4>
 
+				<?php query_posts('posts_per_page=1'); ?>
 
-<section class="recent-posts">
-	<div class="site-content">
-		<div class="blog-post">
-			<h4>From the Blog</h4>
-
-			<?php query_posts('posts_per_page=1'); ?>
-
-			<?php while ( have_posts() ) : the_post(); ?>
+				<?php while ( have_posts() ) : the_post(); ?>
 				<h2><?php the_title(); ?></h2>
 				<?php the_excerpt(); ?>
 				<a href="<?php the_permalink(); ?>" class="read-more-link">Read More<span>&rsaquo;</span></a>
-			<?php endwhile; // end of the loop. ?>
+				<?php endwhile; // end of the loop. ?>
 
-			<?php wp_reset_query(); // resets the altered query back to the original ?>
-		</div>
-	</div>
-</section>
+				<?php wp_reset_query(); // resets the altered query back to the original ?>
+			</div>
+		</section>
+</div>
+
+<!-- Twitter Feed -->
+
+		
+
+	<div class="site-content">
+
+		<?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
+			<div id="secondary" class="widget-area" role="complementary">
+				<h4>Recent Tweet</h4>
+				<h2>@Accelerate</h2>
+					
+					<?php dynamic_sidebar( 'sidebar-2' ); ?>
+					<?php query_posts( 'pagename=homepage' ); ?>
+						<?php while ( have_posts() ) : the_post(); ?>
+
+							<?php $twitter = get_field ( 'twiiter' ); ?>
+								<a href="https://twitter.com/delano_cindy"><h3 class="follow-us"><?php echo $twitter; ?><span>&rsaquo;</span></a></h3></a>
+
+						<?php endwhile; // end of the loop. ?>
+			
+				
+					<?php wp_reset_query(); ?>
+			</div><!-- .widget-area -->
+		<?php endif; ?>
+</div><!-- .site-content -->
+
 
 
 

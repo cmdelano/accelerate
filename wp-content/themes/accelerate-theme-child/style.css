@@ -53,8 +53,11 @@ span {
 
 
 /** single blog post styles on home page **/
+
 .blog-post {
-	width: 50%;
+	float: left;
+	width: 40%;
+	display: inline-block;
 }
 
 .blog-post h4 {
@@ -71,12 +74,62 @@ span {
 }
 
 .blog-post .read-more-link {
-	font-size: 24px;
+	font-size: 18px;
 	font-family: 'Montserrat';
 	font-weight: bold;
 	color: #45ac9d;
 	text-transform: uppercase;
 }
+
+/* Twitter feed styles on Home page */
+
+.widget-area {
+	float: right;
+	display: inline-block;
+	width: 40%;
+}
+
+.widget-area h4 {
+	font-size: 16px;
+	font-family: 'Montserrat';
+	color: #a6a6a6;
+	text-transform: uppercase;
+}
+
+.widget-title {
+    display: none;
+}
+
+.follow-us {
+    font-size: 18px;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    color: #45ac9d;
+    text-transform: uppercase;
+}
+
+.follow-us a:visited {
+	color: #45ac9d;
+}
+
+
+.widget {
+	padding: 0;
+}
+
+.tweets {
+	margin: 0;
+}
+
+.tweets li {
+ 	list-style-type: none;
+ 	margin: 0;
+ 	background: #fff;
+	color: #3b3b3b;
+	font: 17px/1.65 'open sans', Arial, sans-serif;
+}
+
+
 
 /* styles for the featured work on home page */
 
@@ -100,55 +153,22 @@ span {
 
 /** styles for services image on home page **/
 
-
-/** Cindy: why does this go all to hell when I take out the ul and li? **/ 
-
-
-.services-images h4 {
+.services ul li {
+	list-style-type: none;
+	display: inline-block;
+	
+}
+.services h4 {
 	text-transform: uppercase;
 	text-align: center;
-	margin-top: 75px;
+	margin-top: 100px;
+}
+
+.services h5 {
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 75px;
 	color: #99999;
-
-}
-
-.services-images figure {
-	display: inline-block;
-	padding: 0;
-	margin-left: 10px;
-}
-
-
-.services-title ul {
-	list-style-type: none;
-	/*margin: 0;
-	padding: 0;*/
-}
-
-.services-title li {
-	display: inline-block;
-	color: red;
-	font-size: 14px;
-	margin-left: 40px;
-	margin-right: 50px;
-	padding: 0;
-}
-
-
-.title1 {
-	margin-left: 30px;
-}
-
-.title2 {
-	margin-left: 70px;
-}
-
-.title3 {
-	margin-left: 50px;
-}
-
-.title4 {
-	margin-left: 30px;
 }
 
 
@@ -367,7 +387,7 @@ span {
 #ninja_forms_field_18_label {
 	float: left;
 	font-size: 14px;
-	color: #666666;
+	color: #666;
 }
 
 /* Send button */
@@ -381,3 +401,146 @@ span {
 	font-weight: bold;
 	border: none;
 }
+
+/* 404 page styles */
+
+.page-header {
+	border-bottom: none;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+.page-title {
+	color: #45ac9d;
+}
+
+.not-found-message a {
+	color: #fff;
+	font-size: 32px;
+}
+
+.error-page {
+    background: url("img/panorama_of_paris_france_1909_564454.jpg") no-repeat scroll left center / cover rgba(0, 0, 0, 0);
+	height: 440px;
+    margin: 0 0 80px;
+    padding: 100px 0;
+}
+
+/* blog page style */
+
+/* BLOG styles */
+.post-entry {
+	border-bottom: 1px solid #bfbfbf;
+	padding-bottom: 30px;
+	margin-bottom: 30px;
+}
+.entry-title {
+	margin: 0.25em 0;
+	font: bold 1.47em/1.4 'Montserrat', sans-serif;
+	letter-spacing: -0.034em;
+}
+.entry-title a {
+	color: inherit;
+	text-decoration: none;
+}
+.entry-title a:hover {
+	color: #45ac9d;
+}
+.entry-time {
+	color: #45ac9d;
+	font-weight: 600;
+	font-size: 0.82em;
+}
+.entry-summary {
+	font-size: 0.94em;
+}
+.entry-summary .wp-caption {
+	margin: 25px 0;
+	width: 100%;
+	border: 1px solid #bfbfbf;
+}
+.entry-summary .wp-caption iframe {
+	width: 100%;
+	height: 375px;
+	display: block;
+}
+.entry-summary a {
+	color: #45ac9d;
+	text-decoration: underline;
+	font-weight: bold;
+}
+.entry-summary a:hover {
+	text-decoration: none;
+}
+.entry-summary blockquote {
+	margin: 0 47px;
+	padding: 0 14px;
+	position: relative;
+	font: 1.6em/1.45 'Montserrat', 'OpenSans', sans-serif;
+	quotes: '“ ' ' ”' ;
+}
+.entry-summary blockquote p {
+	margin-bottom: 0.9em;
+}
+.entry-summary blockquote p:before {
+	content: '“';
+	margin-left: -14px;
+	padding-right: 5px;
+}
+.entry-summary blockquote p:after {
+	content: '”';
+	margin-right: -14px;
+	padding-left: 5px;
+}
+.entry-summary blockquote footer {
+	line-height: 0.8em;
+	font-size: 0.9em;
+}
+.entry-summary blockquote footer:before {
+	content: '—';
+}
+.post-entry img {
+	max-width: 100%;
+}
+.entry-footer .entry-terms {
+	color: #a6a6a6;
+	font-size: 0.82em;
+}
+.entry-footer {
+	margin-top: 1.5em;
+}
+.entry-footer .entry-terms a {
+	color: #3b3b3b;
+	font-weight: 600;
+	text-decoration: none;
+}
+.entry-footer .entry-terms a:hover {
+	text-decoration: underline;
+}
+.entry-footer .entry-terms + .entry-terms:before {
+	content: '/';
+	padding: 0 10px;
+}
+.post-entry .read-more {
+	color: #150300;
+	font-size: 0.8em;
+	font-weight: 600;
+	line-height: 2.25em;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+.post-entry .read-more span {
+	color: #45ac9d; 
+}
+.post-entry .read-more:hover {
+	border-bottom: 1px solid #45ac9d;
+}
+.main-content .post-entry:last-child {
+	border-bottom: 0;
+}
+
+.left a {
+	color: #45ac9d;
+}
+
+/* end BLOG styles */

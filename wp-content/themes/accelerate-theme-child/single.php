@@ -12,8 +12,10 @@ get_header(); ?>
 	<!-- BLOG PAGE -->
 	<section class="blog-page">
 		<div class="container wrap">
-
+			<div class="site-content">
 			<div class="main-content">
+
+
 <?php
 				// Start the Loop.
 				while ( have_posts() ) : the_post(); ?>
@@ -27,9 +29,9 @@ get_header(); ?>
 							<h2 class="entry-title"><?php the_title(); ?></h2>
 						</header>
 						<div class="entry-summary">
-							<figure class="wp-caption">
+							<!-- <figure class="wp-caption">
 								<img src="upload/entry-img.jpg" alt="">
-							</figure>
+							</figure> -->
 							<?php the_content(); ?>
 						</div>
 						<footer class="entry-footer">
@@ -69,11 +71,12 @@ get_header(); ?>
 <!-- <?php get_sidebar(); ?> -->
 
 		</div>
+		</div>
 	</section>
 	<!-- END blog page -->
 
 	<footer class="navigation container">
-		<div class="left">&larr;<a href="">back to posts</a></div>
+		<div class="left">&larr;<a href="accelerate/blog/">back to posts</a></div>
 	</footer>
 	
 				<?php endwhile; ?>
